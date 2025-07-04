@@ -19,3 +19,8 @@
 <input [(ngModel)]="nome" placeholder="Digite seu nome" />
 <button (click)="gerarMensagem()">Gerar Mensagem</button>
 <p>{{ mensagem }}</p>
+
+<h1>Pipes</h1>
+<h2>Utilizando pipes customizadas!</h2>
+<input [(ngModel)]="nomePipe" placeholder="Digite seu nome para a pipe:" />
+<p>{{ nomePipe | saudacao }}</p>

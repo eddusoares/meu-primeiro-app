@@ -1,0 +1,6 @@
+<input type="file" (change)="onFileChange($event)" />
+
+<div *ngIf="resposta">
+  <h4>Resposta do servidor:</h4>
+  <pre> {{ resposta | json }}</pre>
+</div>

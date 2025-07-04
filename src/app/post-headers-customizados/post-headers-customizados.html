@@ -1,0 +1,8 @@
+<button (click)="enviarComHeaders()">
+  Enviar POST com headers customizados
+</button>
+
+<div *ngIf="resposta">
+  <h4>Resposta do servidos:</h4>
+  <pre> {{ resposta | json }}</pre>
+</div>

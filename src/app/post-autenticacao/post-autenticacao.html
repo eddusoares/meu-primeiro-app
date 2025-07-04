@@ -1,0 +1,6 @@
+<input [(ngModel)]="token" placeholder="Bearer Token" />
+<button (click)="enviarAutenticado()">Enviar POST Autenticado</button>
+<div *ngIf="resposta">
+  <h4>Resposta do servidor:</h4>
+  <pre> {{ resposta | json }}</pre>
+</div>
