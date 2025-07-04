@@ -1,0 +1,36 @@
+<form (ngSubmit)="criarPost()">
+  <label>
+    Título:
+    <input [(ngModel)]="titulo" name="titulo" required="" />
+  </label>
+  <br />
+  <label>
+    Corpo:
+    <input [(ngModel)]="corpo" name="corpo" required="" />
+  </label>
+  <br />
+  <button type="submit" [disabled]="carregando">Enviar Post</button>
+</form>
+<p *ngIf="carregando">Enviando...</p>
+
+<div *ngIf="resposta">
+  <h4>Resposta do servidor:</h4>
+  <pre>{{ resposta | json }}</pre>
+</div>
+
+<br />
+
+<label>
+  Filtrar por userId:
+  <input type="number" [(ngModel)]="userId" />
+</label>
+<button (click)="buscarPosts()">Buscar Posts</button>
+
+<p *ngIf="carregando">Carregando...</p>
+
+<ul>
+  <li *ngFor="let post of posts">
+    <strong> {{ post.title }}</strong>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>

@@ -1,0 +1,33 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SaudacaoService } from '../saudacao';
+
+@Component({
+  selector: 'app-saudacao',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './saudacao.html',
+  styleUrl: './saudacao.scss',
+})
+export class Saudacao {
+  nome = '';
+  fotoUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
+
+  mostrar = true;
+  frutas = ['Maçã', 'Banana', 'Laranja'];
+
+  ativo = false;
+
+  mensagem = '';
+
+  //Injeção de depêndencia
+  constructor(private saudacaoService: SaudacaoService) {}
+
+  dizerOla() {
+    alert('Hello, World!');
+  }
+
+  gerarMensagem() {
+    this.mensagem = this.saudacaoService.getMensagem(this.nome);
+  }
+}

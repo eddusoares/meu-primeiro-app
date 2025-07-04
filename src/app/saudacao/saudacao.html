@@ -1,0 +1,21 @@
+<h1>Primeira Parte básica</h1>
+<h2>Olá, {{ nome }} seja bem-vindo ao meu primeiro componente Angular!</h2>
+<img [src]="fotoUrl" alt="Logo Angular" width="150" />
+<button (click)="dizerOla()">Dizer Olá!</button>
+<hr />
+<h1>Segunda Parte Data Binding</h1>
+<input [(ngModel)]="nome" placeholder="Digite seu nome" />
+<p>Você digitou: {{ nome }}</p>
+<h2>Diretivas Estruturais</h2>
+<button (click)="mostrar = !mostrar">Mostrar/Ocultar lista</button>
+<ul *ngIf="mostrar">
+  <li *ngFor="let fruta of frutas">{{ fruta }}</li>
+</ul>
+<h2>Diretivas de Atributo</h2>
+<p [ngClass]="{ destaque: ativo }">Texto destacado se ativo for true</p>
+<button (click)="ativo = !ativo">Ativar/Desativar</button>
+<h1>Services e injeção de dependências</h1>
+<h2>Usando services</h2>
+<input [(ngModel)]="nome" placeholder="Digite seu nome" />
+<button (click)="gerarMensagem()">Gerar Mensagem</button>
+<p>{{ mensagem }}</p>
