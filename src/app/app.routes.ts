@@ -7,6 +7,9 @@ import { PostSendFiles } from './post-send-files/post-send-files';
 import { PostsComponent } from './posts/posts';
 import { Saudacao } from './saudacao/saudacao';
 import { SobreComponent } from './sobre/sobre';
+import { ObservableDemo } from './obervable-demo/obervable-demo';
+import { ObservableAngular } from './observable-angular/observable-angular';
+import { OperadoresRxjs } from './operadores-rxjs/operadores-rxjs';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,4 +20,8 @@ export const routes: Routes = [
   { path: 'posts-headers', component: PostHeadersCustomizadosComponent },
   { path: 'posts-autenticacao', component: PostAutenticacao },
   { path: 'posts-file-send', component: PostSendFiles },
+  { path: 'observable', component: ObservableDemo },
+  { path: 'observable-angular', component: ObservableAngular },
+  { path: 'operadores-rxjs', component: OperadoresRxjs },
+
 ];
