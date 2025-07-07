@@ -1,15 +1,18 @@
 import { Routes } from '@angular/router';
 import { Cadastro } from './cadastro/cadastro';
+import { DebounceTime } from './debounce-time/debounce-time';
 import { HomeComponent } from './home/home';
+import { ObservableAngular } from './observable-angular/observable-angular';
+import { ObservableDemo } from './observable-demo/observable-demo';
+import { OperadoresRxjs } from './operadores-rxjs/operadores-rxjs';
 import { PostAutenticacao } from './post-autenticacao/post-autenticacao';
 import { PostHeadersCustomizadosComponent } from './post-headers-customizados/post-headers-customizados';
 import { PostSendFiles } from './post-send-files/post-send-files';
 import { PostsComponent } from './posts/posts';
 import { Saudacao } from './saudacao/saudacao';
 import { SobreComponent } from './sobre/sobre';
-import { ObservableDemo } from './obervable-demo/obervable-demo';
-import { ObservableAngular } from './observable-angular/observable-angular';
-import { OperadoresRxjs } from './operadores-rxjs/operadores-rxjs';
+import { SwitchMap } from './switch-map/switch-map';
+import { UsuarioInfo } from './usuario-info/usuario-info';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,5 +26,7 @@ export const routes: Routes = [
   { path: 'observable', component: ObservableDemo },
   { path: 'observable-angular', component: ObservableAngular },
   { path: 'operadores-rxjs', component: OperadoresRxjs },
-
+  { path: 'switch-map', component: SwitchMap },
+  { path: 'debounce-time', component: DebounceTime },
+  { path: 'usuario-info', component: UsuarioInfo },
 ];

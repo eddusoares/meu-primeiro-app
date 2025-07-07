@@ -1,0 +1,12 @@
+<h1>Behavior Subject na Service</h1>
+<hr />
+
+<div *ngIf="usuario$ | async as usuario; else naoLogado">
+  <p>Bem-vindo, {{ usuario }}</p>
+  <button (click)="logout()">Sair</button>
+</div>
+
+<ng-template #naoLogado>
+  <input [(ngModel)]="nomeDigitado" placeholder="Digite seu nome" />
+  <button (click)="login()">Entrar</button>
+</ng-template>

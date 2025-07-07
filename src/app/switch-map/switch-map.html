@@ -1,0 +1,12 @@
+<h1>Switch MAP</h1>
+<label>
+  Filtrar por userId:
+  <input type="number" (input)="onUserIdInput($event)" />
+</label>
+
+<ul>
+  <li *ngFor="let post of posts$ | async">
+    <strong>{{ post.title }}</strong>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>

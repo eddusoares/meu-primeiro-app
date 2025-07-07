@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObervableDemo } from './obervable-demo';
+import { SwitchMap } from './switch-map';
 
-describe('ObervableDemo', () => {
-  let component: ObervableDemo;
-  let fixture: ComponentFixture<ObervableDemo>;
+describe('SwitchMap', () => {
+  let component: SwitchMap;
+  let fixture: ComponentFixture<SwitchMap>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ObervableDemo]
+      imports: [SwitchMap]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ObervableDemo);
+    fixture = TestBed.createComponent(SwitchMap);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
